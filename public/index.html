@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple WebRTC Video Call</title>
+    <style>
+      .video-container {
+        display: flex;
+      }
+      video {
+        width: 50%;
+        border: 2px solid black;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+   <h1>Simple WebRTC Video Call</h1>
+    <!-- Container for holding local and remote videos -->
+    <div class="video-container">
+      <!-- Video element for displaying the local video stream -->
+      <video id="localVideo" autoplay></video>
+      <!-- Video element for displaying the remote video stream -->
+      <video id="remoteVideo" autoplay></video>
+    </div>
+    <button id="muteButton">Mute</button>
+    <button id="videoButton">Turn Off Video</button>
+    <button id="endCallButton">End Call</button>
+    <!-- Script tags for including required JavaScript libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client/dist/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-peer/simplepeer.min.js"></script>
+    <!-- Script tag for including custom JavaScript file -->
+    <script src="app.js"></script>
+  </body>
+</html>
